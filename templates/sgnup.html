@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>{{title}}</title>
+	{%load static %}
+	<link rel="stylesheet" href="{%static 'css/style.css'%}">
+</head>
+<body>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Slide Navbar</title>
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+	<div class="main">  	
+		<input type="checkbox" id="chk" aria-hidden="true">
+
+			<div class="signup">
+				<form action="/" method="post">
+					{% csrf_token %}
+					<label for="chk" aria-hidden="true">Sign up</label>
+					<input type="text" name="username" placeholder="User name" required="">
+					<input type="text" name="email" placeholder="Email" required="">
+					<input type="password" name="pswd" placeholder="Password" required="">
+					<label class="lab" for="account-type">نوع الحساب:</label>
+					<select id="account-type" name="account-type">
+						<option value="buyer">مشتري</option>
+						<option value="seller">بائع</option>
+						<option value="both">كلاهما</option>
+					</select>
+					<button type="submit" class="s">Sign up</button>
+				</form>
+			</div>
+
+			<div class="login">
+				<form>
+					<label for="chk" aria-hidden="true">Login</label>
+					<input type="email" name="email" placeholder="Email" required="">
+					<input type="password" name="pswd" placeholder="Password" required="">
+					<button>Login</button>
+					<a href="http://127.0.0.1:5500/forgpass.html">نسيت كلمة المرور</a>
+				</form>
+			</div>
+	</div>
+</body>
+</html>
+<!-- partial -->
+  
+</body>
+</html>
